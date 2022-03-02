@@ -4,11 +4,10 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -43,6 +42,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  margin-bottom: 24px;
 }
 
 .title,
@@ -51,7 +51,7 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 2rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -68,7 +68,7 @@
 .grid {
   display: flex;
   align-items: center;
-  justify-content: center;
+    
   flex-wrap: wrap;
   max-width: 800px;
 }
@@ -113,4 +113,22 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.mainnav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.mainnav ul li{
+  margin: 24px;
+  list-style: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+.myimg{
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
 }
