@@ -3,6 +3,9 @@ import styles from '../../styles/blogpost.module.css'
 import * as fs from 'fs'; 
 
 const Slug = (props) => {
+  function createMarkup(c) {
+    return {__html: c};
+  }
   const [blog, setBlog] = useState(props.myBlog)
   
   return (
@@ -11,7 +14,7 @@ const Slug = (props) => {
         <div className={styles.container}>
           <h2>{blog && blog.title}</h2>
           <hr/>
-          <p>{blog && blog.content}</p>
+          {blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)} />}
         </div>
       </main>     
     </>
