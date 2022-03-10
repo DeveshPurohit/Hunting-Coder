@@ -22,7 +22,7 @@ export default function Home() {
           Hunting Coder
         </h1>
 
-        <Image className={styles.myimg} src="/homeimaeg.jpeg" height={200} width={200}/>
+        <img className={styles.myImg} src="/homeimaeg.jpeg" height={200} width={200} alt="Hunting Coder"/>
         
         <p className={styles.description}>
         A Blog for hunting coder by hunting coder
