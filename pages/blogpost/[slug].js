@@ -21,12 +21,10 @@ const Slug = (props) => {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug:"how-to-learn-django",
-                  slug:"how-to-learn-nextjs",              
-                  slug:"how-to-learn-python",
-                  slug:"how-to-learn-react"
-                }  
-      }
+      { params: { slug:"how-to-learn-django" } },
+      { params: { slug:"how-to-learn-nextjs" } },              
+      { params: { slug:"how-to-learn-python" } },
+      { params: { slug:"how-to-learn-react" } }
     ],
     fallback: true // false or 'blocking'
   };

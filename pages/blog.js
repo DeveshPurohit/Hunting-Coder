@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/blog.module.css'
 import * as fs from 'fs';
 
-function blog(props) {
+function Blog(props) {
   console.log(props)
   const [blog, setBlogs] = useState(props.allBlogs)
   // useEffect(() => {
@@ -40,5 +40,5 @@ export async function getStaticProps(context) {
   }
 }
 
-export default blog
+export default Blog
 

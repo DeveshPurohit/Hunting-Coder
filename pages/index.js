@@ -1,6 +1,5 @@
 //Added to GitHub
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -21,8 +20,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Hunting Coder
         </h1>
-
-        <img className={styles.myImg} src="/homeimaeg.jpeg" height={200} width={200} alt="Hunting Coder"/>
+        
+        <img className={styles.myImg} src="/homeimaeg.jpeg" height={220} width={220} alt="Hunting Coder"/>
         
         <p className={styles.description}>
         A Blog for hunting coder by hunting coder
