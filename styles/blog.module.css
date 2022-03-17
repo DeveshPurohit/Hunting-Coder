@@ -10,3 +10,11 @@
 .blogitemp{
   max-width: 45vw;
 }
+
+.btn {
+  color: white;
+  background: black;
+  border-radius: 5px;
+  padding: 4px 7px;
+  cursor: pointer;
+}

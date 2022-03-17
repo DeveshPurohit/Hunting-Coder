@@ -57,22 +57,22 @@ fetch('http://localhost:3000/api/postcontact', {
       <form onSubmit={handleSubmit}>
         <div className={styles.mb3}>
           <label htmlFor="name" className={styles.formlabel}>Name</label>
-          <input type="name" value={name} onChange={handleChange} className="form-control" id="name" name='name' aria-describedby="emailHelp"/>
+          <input type="name" value={name} onChange={handleChange} className={styles.input} id="name" name='name' aria-describedby="emailHelp"/>
         </div>
         <div className={styles.mb3}>
           <label htmlFor="exampleInputEmail1" className={styles.formlabel}>Email address</label>
-          <input type="email" value={email} onChange={handleChange} className="form-control" id="exampleInputEmail1" name='email' aria-describedby="emailHelp"/>
-          <div id="emailHelp"  className="form-text">We'll never share your email with anyone else.</div>
+          <input type="email" value={email} onChange={handleChange} className={styles.input} id="exampleInputEmail1" name='email' aria-describedby="emailHelp"/>
+          <div id="emailHelp"  className={styles.formtext}>We'll never share your email with anyone else.</div>
         </div>
         <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}>Phone</label>
-          <input type="phone" value={phone} className="form-control" onChange={handleChange} name='phone' id="phone" aria-describedby="emailHelp"/>
+          <input type="phone" value={phone} className={styles.input} onChange={handleChange} name='phone' id="phone" aria-describedby="emailHelp"/>
         </div>
         <div className={styles.mb3}>
           <label className={styles.formlabel} htmlFor="desc">Elaborate your concern</label>
-          <textarea className="form-control" onChange={handleChange}  name='desc' value={desc} placeholder="Write your concern here" id="desc"/>
+          <textarea className={styles.input} onChange={handleChange}  name='desc' value={desc}  id="desc"/>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className={styles.btn}>Submit</button>
       </form>
     </div>
   )

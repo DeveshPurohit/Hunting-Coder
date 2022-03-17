@@ -18,6 +18,7 @@ function Blog(props) {
           return <div key={blogitem.slug} className={styles.blogitem}>
                   <Link href={`/blogpost/${blogitem.slug}`}><a><h3>{blogitem.title}</h3></a></Link>
                   <p className={styles.blogitemp}>{blogitem.metadesc.substr(0,150)}....</p>
+                  <Link href={`/blogpost/${blogitem.slug}`}><button className={styles.btn}>Read more</button></Link>
                  </div>
           })}
         </div> 
