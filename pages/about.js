@@ -4,7 +4,7 @@ import styles from '../styles/about.module.css'
 function about() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.head}>About Hunting Coder</h1>  
+      <h1 className={styles.heading}>About Hunting Coder</h1>  
       <h2>Introduction</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla sint recusandae hic eos nam, ex debitis illo magnam rerum, nihil inventore placeat. Temporibus eligendi quidem fugit consectetur enim ipsa rem libero maiores earum doloremque molestiae eveniet quasi debitis esse alias cumque architecto, aperiam quis dolore. Porro deserunt velit natus iste doloribus quos veniam unde, deleniti in corporis. Doloribus voluptatum quod illo dolorem doloremque amet porro veniam quam incidunt tempore dicta cumque accusantium at, officia suscipit magnam? Dolor odit quidem architecto soluta voluptates impedit cumque necessitatibus ipsam! Repudiandae provident quae nemo ea nulla, earum reprehenderit dolorem natus nesciunt vitae totam.</p>
       <h2>Services Offerd</h2>
