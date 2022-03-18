@@ -11,14 +11,14 @@ function about() {
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. sa aut ex debitis modi eveniet quaerat officia facere nisi assumenda!</p>
       <p>We offer following services :-</p>
       <ul>
-        <li>srevice 1</li>
-        <li>srevice 2</li>
-        <li>srevice 3</li>
-        <li>srevice 4</li>
-        <li>srevice 5</li>
-        <li>srevice 6</li>
-        <li>srevice 7</li>
-        <li>srevice 8</li>
+        <li>service 1</li>
+        <li>service 2</li>
+        <li>service 3</li>
+        <li>service 4</li>
+        <li>service 5</li>
+        <li>service 6</li>
+        <li>service 7</li>
+        <li>service 8</li>
       </ul>
       <h2>Contact Us</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime rerum tempore a totam modi voluptatum, quod facere voluptates similique iure placeat praesentium explicabo, impedit voluptas ab aperiam incidunt provident dignissimos ea obcaecati, sequi fugit odio eaque! Provident nemo iure hic magni neque! Voluptatibus a velit nemo aperiam, inventore nisi maxime accusantium earum amet, dolores perferendis harum nesciunt blanditiis porro! Neque blanditiis iusto earum labore veritatis rerum doloribus! Neque, excepturi perspiciatis.</p>
