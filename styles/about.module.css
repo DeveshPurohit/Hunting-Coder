@@ -1,7 +1,14 @@
-.container{
-    max-width: 45vw;
-    margin: auto;
+.container {
+  max-width: 45vw;
+  margin: auto;
 }
-.heading{
-    text-align: center;
+.heading {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 40px auto;
+    max-width: 90vw;
+  }
 }

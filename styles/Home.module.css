@@ -149,3 +149,13 @@
   margin-top: 24px;
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  
+  .mainnav ul li{
+    margin: 0 6px;
+      list-style: none;
+      font-weight: bold;
+   
+}
+}

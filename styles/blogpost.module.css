@@ -1,15 +1,21 @@
 .main {
-    min-height: 100vh;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.container {
+  padding: 0 22rem;
+}
+.container h2 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
   .container {
-    padding: 0 22rem;
+    padding: 0 2.5rem;
   }
-  .container h2{
-    text-align: center;
-  }
+}

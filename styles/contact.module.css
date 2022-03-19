@@ -1,35 +1,42 @@
-.container{
-    max-width: 45vw;
-    margin: auto;
+.container {
+  max-width: 45vw;
+  margin: auto;
 }
 
-.mb3{
-    margin-bottom: 22px;
-    display: flex;
-    flex-direction: column;
+.mb3 {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
-.formlabel{
-    padding: 7px 0px;
+.formlabel {
+  padding: 7px 0px;
 }
 
-.input{
-    border: 1.5px solid black;
-    padding: 3px;
-    border-radius: 4px;
-    font-size: 18px;
+.input {
+  border: 1.5px solid black;
+  padding: 3px;
+  border-radius: 4px;
+  font-size: 18px;
 }
 
-.formtext{
-    color:gray;
-    padding: 5px 4px;
-    font-size: 12px;
+.formtext {
+  color: gray;
+  padding: 5px 4px;
+  font-size: 12px;
 }
 
 .btn {
-    color: white;
-    background: black;
-    border-radius: 5px;
-    padding: 4px 7px;
-    cursor: pointer;
+  color: white;
+  background: black;
+  border-radius: 5px;
+  padding: 4px 7px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 88vw;
+    margin: auto;
   }
+}
