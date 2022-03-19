@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styles from '../styles/contact.module.css'
 
-function contact() {
+function Contact() {
   
   const [name,setname] = useState('')
   const [email,setemail] = useState('')
@@ -62,7 +62,7 @@ fetch('http://localhost:3000/api/postcontact', {
         <div className={styles.mb3}>
           <label htmlFor="exampleInputEmail1" className={styles.formlabel}>Email address</label>
           <input type="email" value={email} onChange={handleChange} className={styles.input} id="exampleInputEmail1" name='email' aria-describedby="emailHelp"/>
-          <div id="emailHelp"  className={styles.formtext}>We'll never share your email with anyone else.</div>
+          <div id="emailHelp"  className={styles.formtext}>We will never share your email with anyone else.</div>
         </div>
         <div className={styles.mb3}>
           <label htmlFor="phone" className={styles.formlabel}>Phone</label>
@@ -78,4 +78,4 @@ fetch('http://localhost:3000/api/postcontact', {
   )
 }
 
-export default contact
+export default Contact
