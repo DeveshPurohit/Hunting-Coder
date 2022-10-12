@@ -1,8 +1,11 @@
-//Added to GitHub
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import * as fs from "fs";
+import { useState } from "react";
+import Link from "next/link";
 
-export default function Home() {
+export default function Home(props) {
+  const [blog, setBlogs] = useState(props.allBlogs);
   return (
     <div className={styles.container}>
       <Head>
@@ -19,40 +22,70 @@ export default function Home() {
           alt="Hunting Coder"
         />
 
-        <h2>&lt;Hunting Coder/&gt;</h2>
+        <h2 className="font-medium">&lt;Blogger/&gt;</h2>
 
         <p className={styles.description}>
-          A Blog for hunting coder by hunting coder
+        Don{"'"}t be afraid to give up the good to go for the great.
         </p>
 
         <div className="blogs">
-          <h2>Popular blogs</h2>
-          <div className="blogitem">
-            <h3 className={styles.h3}>Furasst Beloog</h3>
-            <p className={styles.para}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatum, odit...
-            </p>
-            <button className={styles.btn}>Read more</button>
+          <h2 className="text-center text-2xl font-semibold mt-10">Latest blogs</h2>
+          <section className="text-gray-600 body-font">
+  <div className="container px-5 py-16 mx-auto">
+    <div className="flex flex-wrap -mx-4 -my-8">
+      {blog.map((blogitem) => {
+        return(
+          <div key={blogitem.slug} className="py-8 px-4 lg:w-1/3">
+          <div className="h-full flex items-start">
+            <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+              <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Aug</span>
+              <span className="font-medium text-lg text-gray-800 title-font leading-none">31</span>
+            </div>
+            <div className="flex-grow pl-6">
+              <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">{blogitem.category}</h2>
+              <h1 className="title-font text-xl font-medium text-gray-900 mb-3">{blogitem.title}</h1>
+              <p className="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <Link href={`/blogpost/${blogitem.slug}`}>
+                    <a className="text-indigo-500 inline-flex items-center mt-2">
+                      Read More
+                      <svg
+                        className="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    </Link>
+            </div>
           </div>
-          <div className="blogitem">
-            <h3 className={styles.h3}>Furasst Beloog</h3>
-            <p className={styles.para}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatum, odit...
-            </p>
-            <button className={styles.btn}>Read more</button>
-          </div>
-          <div className="blogitem">
-            <h3 className={styles.h3}>Furasst Beloog</h3>
-            <p className={styles.para}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatum, odit...
-            </p>
-            <button className={styles.btn}>Read more</button>
-          </div>
+        </div>
+      )
+    })}
+    </div>
+  </div>
+</section>
         </div>
       </main>
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  let data = await fs.promises.readdir("blogdata");
+  let myfile;
+  let allBlogs = [];
+  for (let index = 0; index < 3; index++) {
+    const item = data[index];
+    myfile = await fs.promises.readFile("blogdata/" + item, "utf-8");
+    allBlogs.push(JSON.parse(myfile));
+  }
+  return {
+    props: { allBlogs }, // will be passed to the page component as props
+  };
 }
