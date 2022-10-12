@@ -2,34 +2,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "../styles/blog.module.css";
 import * as fs from "fs";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 function Blog(props) {
-  console.log(props);
   const [blog, setBlogs] = useState(props.allBlogs);
-  const [count, setcount] = useState(4);
-
-  const fetchData = async () => {
-    let d = await fetch(`https://huntingcoder-eta.vercel.app/api/blogs/?count=${count + 4}`);
-    setcount(count + 4);
-    let data = await d.json();
-    setBlogs(data);
-  };
 
   return (
     <>
       <main className={styles.main}>
-        <InfiniteScroll
-          dataLength={blog.length} //This is important field to render the next data
-          next={fetchData}
-          hasMore={props.allCount !== blog.length}
-          loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{ textAlign: "center" }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
-        >
               <section className="text-gray-600 body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
               <div className="-my-8 divide-y-2 divide-gray-100">
@@ -76,23 +55,12 @@ function Blog(props) {
                 </div>
                   );
                 })}
+                <p style={{ textAlign: "center" }}>
+              <b>Yay! You have seen it all</b>
+            </p>
               </div>
             </div>
           </section>
-              {/* // <div key={blogitem.slug} className={styles.blogitem}>
-              //   <Link href={`/blogpost/${blogitem.slug}`}>
-              //     <a>
-              //       <h3>{blogitem.title}</h3>
-              //     </a>
-              //   </Link>
-              //   <p className={styles.blogitemp}>
-              //     {blogitem.metadesc.substr(0, 150)}....
-              //   </p>
-              //   <Link href={`/blogpost/${blogitem.slug}`}>
-              //     <button className={styles.btn}>Read more</button>
-              //   </Link>
-              // </div> */}
-        </InfiniteScroll>
       </main>
     </>
   );
@@ -103,7 +71,7 @@ export async function getStaticProps(context) {
   let myfile;
   let allCount = data.length;
   let allBlogs = [];
-  for (let index = 0; index < 4; index++) {
+  for (let index = 0; index < allCount; index++) {
     const item = data[index];
     myfile = await fs.promises.readFile("blogdata/" + item, "utf-8");
     allBlogs.push(JSON.parse(myfile));
