@@ -41,7 +41,7 @@ function Blog(props) {
                       {blogitem.category}
                     </span>
                     <span className="mt-1 text-gray-500 text-sm">
-                      12 Jun 2019
+                      31 Aug 2022
                     </span>
                   </div>
                   <div className="md:flex-grow">
